@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import FeatherIcon from 'feather-icons-react'
 
 import Layout from '../components/layout'
 
@@ -49,9 +48,11 @@ const Channel = styled.li`
     cursor: default;
   }
 `
-const LeftIcon = styled(FeatherIcon)`
-  padding-right: 0.3rem;
+const LeftIcon = styled.i`
+  padding-top: 0.3rem;
   margin-right: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
 `
 
 // Blog list component
@@ -92,27 +93,27 @@ const IndexPage = () => (
       <Sidebar>
         <ChannelList>
           <Channel>
-            <LeftIcon icon="gift" size={24} />
+            <LeftIcon className="fa fa-at" />
             <div>Profile</div>
           </Channel>
           <Channel>
-            <LeftIcon icon="terminal" size={24} />
+            <LeftIcon className="fa fa-terminal" />
             <div>Development</div>
           </Channel>
           <Channel className="active">
-            <LeftIcon icon="hash" size={24} />
+            <LeftIcon className="fa fa-hashtag" />
             <div>Design</div>
           </Channel>
           <Channel>
-            <LeftIcon icon="box" size={24} />
+            <LeftIcon className="fa fa-product-hunt" />
             <div>Product</div>
           </Channel>
           <Channel>
-            <LeftIcon icon="bookmark" size={24} />
+            <LeftIcon className="fa fa-heartbeat" />
             <div>Goals</div>
           </Channel>
           <Channel>
-            <LeftIcon icon="database" size={24} />
+            <LeftIcon className="fa fa-pagelines" />
             <div>Philosophy</div>
           </Channel>
         </ChannelList>
