@@ -7,8 +7,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-styled-components',
       options: {
-        displayName: false,
-        preprocess: true,
+        displayName: false
+      },
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography.js`,
       },
     },
   ],

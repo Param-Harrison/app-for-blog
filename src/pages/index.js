@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'emotion'
+import styled from 'styled-components'
 import FeatherIcon from 'feather-icons-react'
 
 import Layout from '../components/layout'
@@ -26,7 +26,7 @@ const BlogContainer = styled.aside`
 `
 
 const BaseContainer = styled.section`
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem;
 `
 
 const Container = styled(BaseContainer)`
@@ -34,34 +34,52 @@ const Container = styled(BaseContainer)`
 `
 
 // Sidebar components
-const RightIcon = styled(FeatherIcon)`
-  margin-left: auto;
+const ChannelList = styled.ul`
+  padding: 1rem 0;
 `
-const ChannelList = BaseContainer.withComponent('ul')
 const Channel = styled.li`
   display: flex;
   cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: all 0.1s linear;
   &:hover {
     background: #fafafa;
     color: #444;
   }
 `
 const LeftIcon = styled(FeatherIcon)`
-  padding-right: 0.4rem;
+  padding-right: 0.3rem;
+  margin-right: 0.5rem;
 `
 
 const IndexPage = () => (
   <Layout>
     <Wrapper>
       <Sidebar>
-        <Container>
-          <h4>Channels</h4>
-        </Container>
         <ChannelList>
           <Channel>
-            <LeftIcon icon="hash" size={18} />
-            <div>Channels</div>
-            <RightIcon icon="chevron-right" size={20} />
+            <LeftIcon icon="gift" size={24} />
+            <div>Profile</div>
+          </Channel>
+          <Channel>
+            <LeftIcon icon="terminal" size={24} />
+            <div>Development</div>
+          </Channel>
+          <Channel>
+            <LeftIcon icon="hash"  size={24} />
+            <div>Design</div>
+          </Channel>
+          <Channel>
+            <LeftIcon icon="box"  size={24} />
+            <div>Product</div>
+          </Channel>
+          <Channel>
+            <LeftIcon icon="bookmark"  size={24} />
+            <div>Goals</div>
+          </Channel>
+          <Channel>
+            <LeftIcon icon="database"  size={24} />
+            <div>Philosophy</div>
           </Channel>
         </ChannelList>
       </Sidebar>
