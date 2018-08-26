@@ -43,7 +43,7 @@ const Channel = styled.li`
   padding: 0.5rem 1rem;
   transition: all 0.1s linear;
   &:hover {
-    background: rgba(255,255,255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
   }
   &.active {
     background: #f1f6fb;
@@ -69,19 +69,19 @@ const IndexPage = () => (
             <div>Development</div>
           </Channel>
           <Channel className="active">
-            <LeftIcon icon="hash"  size={24} />
+            <LeftIcon icon="hash" size={24} />
             <div>Design</div>
           </Channel>
           <Channel>
-            <LeftIcon icon="box"  size={24} />
+            <LeftIcon icon="box" size={24} />
             <div>Product</div>
           </Channel>
           <Channel>
-            <LeftIcon icon="bookmark"  size={24} />
+            <LeftIcon icon="bookmark" size={24} />
             <div>Goals</div>
           </Channel>
           <Channel>
-            <LeftIcon icon="database"  size={24} />
+            <LeftIcon icon="database" size={24} />
             <div>Philosophy</div>
           </Channel>
         </ChannelList>
