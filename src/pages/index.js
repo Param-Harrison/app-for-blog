@@ -32,10 +32,13 @@ const Container = styled(BaseContainer)`
 
 // Sidebar components
 const ChannelList = styled.ul`
+  display: flex;
+  flex-direction: column;
   padding: 1rem 0;
+  height: 100vh;
+  overflow: auto;
 `
 const Channel = styled.li`
-  display: flex;
   cursor: pointer;
   padding: 0.5rem 1rem;
   transition: all 0.2s linear;
@@ -54,20 +57,29 @@ const LeftIcon = styled.i`
   width: 1.5rem;
   height: 1.5rem;
 `
+const ChannelContent = styled.span`
+`
 
 // Blog list component
-const SingleBlogHead = styled.h4`
+const BlogHead = styled.h4`
   font-weight: normal;
   color: #444;
 `
-const SingleBlogParagraph = styled.p`
+const BlogParagraph = styled.p`
   color: #888;
   padding-top: 0.2rem;
   font-size: 0.8rem;
 `
-const SingleBlog = styled.div`
+const BlogList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  padding: 0.3rem 0.8rem;
+  height: 100vh;
+  overflow: auto;
+`
+const Blog = styled.li`
   padding: 1rem;
-  margin: 0.6rem 0.8rem;
+  margin: 0.3rem 0;
   background: rgba(255, 255, 255, 0.4);
   border-radius: 4px;
   cursor: pointer;
@@ -78,10 +90,10 @@ const SingleBlog = styled.div`
   &.active {
     background: linear-gradient(to right, #f12711, #f5af19);
     cursor: default;
-    ${SingleBlogHead} {
+    ${BlogHead} {
       color: #fff;
     }
-    ${SingleBlogParagraph} {
+    ${BlogParagraph} {
       color: #ededed;
     }
   }
@@ -94,61 +106,63 @@ const IndexPage = () => (
         <ChannelList>
           <Channel>
             <LeftIcon className="fa fa-at" />
-            <div>Profile</div>
+            <ChannelContent>Profile</ChannelContent>
           </Channel>
           <Channel>
             <LeftIcon className="fa fa-terminal" />
-            <div>Development</div>
+            <ChannelContent>Development</ChannelContent>
           </Channel>
           <Channel className="active">
             <LeftIcon className="fa fa-hashtag" />
-            <div>Design</div>
+            <ChannelContent>Design</ChannelContent>
           </Channel>
           <Channel>
             <LeftIcon className="fa fa-product-hunt" />
-            <div>Product</div>
+            <ChannelContent>Product</ChannelContent>
           </Channel>
           <Channel>
             <LeftIcon className="fa fa-heartbeat" />
-            <div>Goals</div>
+            <ChannelContent>Goals</ChannelContent>
           </Channel>
           <Channel>
             <LeftIcon className="fa fa-pagelines" />
-            <div>Philosophy</div>
+            <ChannelContent>Philosophy</ChannelContent>
           </Channel>
         </ChannelList>
       </Sidebar>
       <BlogListContainer>
-        <SingleBlog>
-          <SingleBlogHead>About this website</SingleBlogHead>
-          <SingleBlogParagraph>Blog with web app UI</SingleBlogParagraph>
-        </SingleBlog>
-        <SingleBlog className="active">
-          <SingleBlogHead>
-            My daily routine in product development
-          </SingleBlogHead>
-          <SingleBlogParagraph>Simple words about product</SingleBlogParagraph>
-        </SingleBlog>
-        <SingleBlog>
-          <SingleBlogHead>About this website</SingleBlogHead>
-          <SingleBlogParagraph>Blog with web app UI</SingleBlogParagraph>
-        </SingleBlog>
-        <SingleBlog>
-          <SingleBlogHead>
-            My daily routine in product development
-          </SingleBlogHead>
-          <SingleBlogParagraph>Simple words about product</SingleBlogParagraph>
-        </SingleBlog>
-        <SingleBlog>
-          <SingleBlogHead>About this website</SingleBlogHead>
-          <SingleBlogParagraph>Blog with web app UI</SingleBlogParagraph>
-        </SingleBlog>
-        <SingleBlog>
-          <SingleBlogHead>
-            My daily routine in product development
-          </SingleBlogHead>
-          <SingleBlogParagraph>Simple words about product</SingleBlogParagraph>
-        </SingleBlog>
+        <BlogList>
+          <Blog>
+            <BlogHead>About this website</BlogHead>
+            <BlogParagraph>Blog with web app UI</BlogParagraph>
+          </Blog>
+          <Blog className="active">
+            <BlogHead>
+              My daily routine in product development
+            </BlogHead>
+            <BlogParagraph>Simple words about product</BlogParagraph>
+          </Blog>
+          <Blog>
+            <BlogHead>About this website</BlogHead>
+            <BlogParagraph>Blog with web app UI</BlogParagraph>
+          </Blog>
+          <Blog>
+            <BlogHead>
+              My daily routine in product development
+            </BlogHead>
+            <BlogParagraph>Simple words about product</BlogParagraph>
+          </Blog>
+          <Blog>
+            <BlogHead>About this website</BlogHead>
+            <BlogParagraph>Blog with web app UI</BlogParagraph>
+          </Blog>
+          <Blog>
+            <BlogHead>
+              My daily routine in product development
+            </BlogHead>
+            <BlogParagraph>Simple words about product</BlogParagraph>
+          </Blog>
+        </BlogList>
       </BlogListContainer>
       <BlogContainer>
         <Container>Blog Container</Container>
