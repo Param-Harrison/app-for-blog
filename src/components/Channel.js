@@ -24,10 +24,12 @@ const LeftIcon = styled.i`
   width: 1.5rem;
   height: 1.5rem;
 `
-const ChannelContent = styled.span``
+const ChannelContent = styled.span`
+  text-transform: capitalize;
+`
 
-const Channel = ({ icon, name, link }) => (
-  <SingleChannel activeClassName="active" to={link}>
+const Channel = ({ icon, name, link, isActive }) => (
+  <SingleChannel className={isActive ? 'active' : null} to={link}>
     <LeftIcon className={`fa fa-${icon}`} />
     <ChannelContent>{name}</ChannelContent>
   </SingleChannel>
@@ -37,6 +39,7 @@ Channel.propTypes = {
   icon: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
+  isActive: PropTypes.bool.isRequired,
 }
 
 export default Channel

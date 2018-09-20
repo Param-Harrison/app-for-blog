@@ -1,32 +1,32 @@
 const channelData = [
   {
     icon: 'at',
-    name: 'Profile',
+    name: 'profile',
     link: '/',
   },
   {
     icon: 'terminal',
-    name: 'Development',
+    name: 'development',
     link: '/development',
   },
   {
     icon: 'hashtag',
-    name: 'Design',
+    name: 'design',
     link: '/design',
   },
   {
     icon: 'product-hunt',
-    name: 'Product',
+    name: 'product',
     link: '/product',
   },
   {
     icon: 'heartbeat',
-    name: 'Goals',
+    name: 'goals',
     link: '/goals',
   },
   {
     icon: 'pagelines',
-    name: 'Philosophy',
+    name: 'philosophy',
     link: '/philosophy',
   },
 ]

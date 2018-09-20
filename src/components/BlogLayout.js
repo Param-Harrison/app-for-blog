@@ -32,11 +32,11 @@ const Container = styled(BaseContainer)`
   display: flex;
 `
 
-const BlogLayout = ({ channels, topics, children }) => (
+const BlogLayout = ({ channels, topics, selectedChannel, children }) => (
   <Layout>
     <Wrapper>
       <Sidebar>
-        <ChannelList channels={channels} />
+        <ChannelList selectedChannel={selectedChannel} channels={channels} />
       </Sidebar>
       <BlogListContainer>
         <TopicList topics={topics} />

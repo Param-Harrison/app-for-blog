@@ -9,7 +9,7 @@ const IndexPage = () => (
     channels={channelData}
     topics={topicData.profile}
   >
-    Content of the blog comes here
+    Web app as a blog content
   </BlogLayout>
 )
 

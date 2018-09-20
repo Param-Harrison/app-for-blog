@@ -8,7 +8,7 @@ const topicData = {
     {
       title: 'About this website',
       text: 'Blog with web app UI',
-      link: '/about-blog',
+      link: '/web-app-as-blog',
     },
   ],
   development: [

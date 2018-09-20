@@ -12,10 +12,14 @@ const Channels = styled.section`
   overflow: auto;
 `
 
-const ChannelList = ({ channels }) => (
+const ChannelList = ({ channels, selectedChannel }) => (
   <Channels>
     {channels.map((channel, index) => (
-      <Channel key={`channel-${index}`} {...channel} />
+      <Channel
+        key={`channel-${index}`}
+        {...channel}
+        isActive={channel.name === selectedChannel}
+      />
     ))}
   </Channels>
 )
@@ -27,6 +31,7 @@ ChannelList.propTypes = {
       name: PropTypes.string.isRequired,
     })
   ).isRequired,
+  selectedChannel: PropTypes.string.isRequired,
 }
 
 export default ChannelList
