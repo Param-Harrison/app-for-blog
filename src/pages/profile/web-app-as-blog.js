@@ -1,7 +1,7 @@
 import React from 'react'
-import BlogLayout from '../components/BlogLayout'
+import BlogLayout from '../../components/BlogLayout'
 
-import { channelData, topicData } from '../data'
+import { channelData, topicData } from '../../data'
 
 const IndexPage = () => (
   <BlogLayout
