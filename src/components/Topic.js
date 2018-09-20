@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import Link from 'gatsby-link'
 
 const TopicHead = styled.h4`
   font-weight: normal;
@@ -12,7 +13,7 @@ const TopicParagraph = styled.p`
   font-size: 0.8rem;
 `
 
-const SingleTopic = styled.li`
+const SingleTopic = styled(Link)`
   padding: 1rem;
   margin: 0.3rem 0;
   background: rgba(255, 255, 255, 0.4);
@@ -33,8 +34,8 @@ const SingleTopic = styled.li`
     }
   }
 `
-const Topic = ({ title, text }) => (
-  <SingleTopic>
+const Topic = ({ title, text, link }) => (
+  <SingleTopic activeClassName="active" to={link}>
     <TopicHead>{title}</TopicHead>
     {text ? <TopicParagraph>{text}</TopicParagraph> : null}
   </SingleTopic>
@@ -43,6 +44,7 @@ const Topic = ({ title, text }) => (
 Topic.propTypes = {
   title: PropTypes.string.isRequired,
   text: PropTypes.string,
+  link: PropTypes.string.isRequired,
 }
 
 export default Topic

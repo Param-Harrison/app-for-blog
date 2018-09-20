@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import Topic from './Topic'
 
-const Topics = styled.ul`
+const Topics = styled.section`
   display: flex;
   flex-direction: column;
   padding: 0.3rem 0.8rem;

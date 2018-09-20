@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import Channel from './Channel'
 
-const Channels = styled.ul`
+const Channels = styled.section`
   display: flex;
   flex-direction: column;
   padding: 1rem 0;
