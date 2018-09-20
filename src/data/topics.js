@@ -32,7 +32,7 @@ const topicData = {
       link: '/development/full-stack-development',
     },
     {
-      title: 'My (current) experiment stack',
+      title: 'My (current) experimental stack',
       text: 'Horses for courses',
       link: '/development/experimental-stack',
     },
